@@ -1,4 +1,5 @@
 @import url('Https://fonts.googleapis.com/css2?family=Poppins');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,16 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', Arial, sans-serif;
 }
-body{
+
+body {
     background-color: black;
     color: white;
 }
-.drop{
+
+.drop {
     background-color: rgb(50, 50, 50);
     height: 35px;
     width: 35px;
@@ -23,86 +27,104 @@ body{
     display: flex;
     border-radius: 50px;
 }
-.drop:hover{
+
+.drop:hover {
     background-color: rgb(74, 73, 73);
 }
-header{
+
+header {
     width: 100%;
     position: fixed;
     height: fit-content;
     z-index: 1;
     background-color: black;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
-header nav{
+
+header nav {
     display: grid;
-    /* justify-content: space-between; */
     align-items: center;
-    width: fit-content;
     gap: 10px;
     margin-left: auto;
     margin-right: auto;
 }
-header nav .up{
+
+header nav .up {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    gap: 180px;
+
 }
-header nav .left{
+
+header nav .up .left .hamburger {
+    padding: 10px;
+}
+
+header nav .up .left .hamburger:hover {
+    background-color: rgb(74, 73, 73);
+    border-radius: 50%;
+}
+
+header nav .left {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-header nav .left .logo{
+
+header nav .left .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header nav .left .logo img{
-    width: 50px;
+
+header nav .left .logo img {
+    width: 40px;
 }
 
-header nav .middle{
+header nav .middle {
     display: flex;
     padding: 20px;
     height: 50px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border: 1px solid red;
     width: 100%;
 }
-header nav .middle input{
-    width: 100%;
+
+header nav .middle input {
+    width: 50%;
     height: 40px;
     border-radius: 50px;
     padding: 20px;
     color: #fff;
     background-color: rgb(50, 50, 50);
 }
-header nav .right{
+
+header nav .right {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-i{
+
+i {
     color: #fff;
 }
-header nav .down{
+
+header nav .down {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin-left: 50px;
 }
-header nav .down .options{
+
+header nav .down .options {
     width: fit-content;
     padding: 0 15px;
-    height: 40px;
+    height: 35px;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -113,7 +135,8 @@ header nav .down .options{
     font-weight: 600;
     letter-spacing: 1px;
 }
-header nav .down .options:hover{
+
+header nav .down .options:hover {
     background-color: rgb(74, 73, 73);
 }
 
@@ -127,27 +150,32 @@ header nav .down .options:hover{
 
 
 
-.home{
-    padding: 0 30px;
+.home {
+    padding: 10px;
     display: flex;
-    gap: 10px;
-    position: relative;
     width: 100%;
-    top: 100px;
+    justify-content: center;
 }
-.home .left{
+
+.home .leftside {
     width: 80px;
     display: grid;
     gap: 10px;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 75px;
+    z-index: 1;
+    left: 0;
+    position: fixed;
+    font-size: 0.7rem;
 }
-.home .left i{
+
+.home .leftside i {
     font-size: 20px;
 }
-.home .left .box{
+
+.home .leftside .box {
     display: grid;
     gap: 10px;
     justify-content: center;
@@ -156,44 +184,88 @@ header nav .down .options:hover{
     padding: 15px 1px;
     border-radius: 10px;
 }
-.home .left .box:hover{
+
+.home .leftside .box:hover {
     background-color: rgb(74, 73, 73);
 }
-.home .right{
-    display: grid;
-    justify-content: center;
-    align-items: center;    
-}
-.home .right .up{
-    width: fit-content;
-    display: flex;
-    gap: 10px;
-    height: 50px;
-    position: absolute;
-    top: 0;
+
+.home .rightside {
+    margin-top: 90px;
+    align-items: center;
+    margin-left: 70px;
 }
 
-.home .down{
-    width: 90%;
-    position: absolute;
-    top: 60px;
+.home .down {
+    margin-top: 40px;
     display: flex;
-    gap: 20px;
+    row-gap: 60px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
-.home .down .videos{
-   width: 350px;
+
+.home .down .videos {
+    width: 350px;
+    border: 1px solid yellow;
+    display: grid;
+    gap: 15px;
 }
-.home .down .videos img{
+
+.home .down .videos img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     border-radius: 10px;
 }
-.home .down .videos:hover{
+
+.home .down .videos:hover {
     transform: scale(1.01);
 }
-.home .down .videos .description{
+
+.home .down .videos .description {
     display: flex;
+    gap: 15px;
+}
+
+.home .down .videos .description .right {
+    display: grid;
+    gap: 5px;
+}
+
+.home .down .videos .description .right p {
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width : 1000px) {
+    body {
+        background-color: #fff;
+    }
+
+    .search {
+        display: initial;
+    }
+
+    header nav .middle {
+        display: none;
+    }
+
+    header nav .left {
+        border: 1px solid red;
+    }
+
+    header nav .right {
+        border: 1px solid red;
+    }
+
+    header nav .up {
+        padding: 10px 10px;
+    }
 }
